@@ -96,8 +96,11 @@ export const notesSlice = createSlice({
 
 export const { create, remove, toggleArchived, edit } = notesSlice.actions;
 
+export const selectNotes = (state) => state.notes.notes;
+
 export const selectActiveNotes = (state) =>
 	state.notes.notes.filter((note) => !note.archived);
+
 export const selectArchivedNotes = (state) =>
 	state.notes.notes.filter((note) => note.archived);
 
