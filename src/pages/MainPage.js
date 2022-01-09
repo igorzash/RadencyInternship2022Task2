@@ -36,7 +36,9 @@ export function MainPage() {
 					}}
 				/>
 
-				<Button onClick={handleCreateNote}>Create note</Button>
+				{activeTab === 0 && (
+					<Button onClick={handleCreateNote}>Create note</Button>
+				)}
 			</Group>
 
 			<Spacing y={30} />
