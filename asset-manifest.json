@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/RadencyInternship2022Task2/static/css/main.262b0e92.css",
+    "main.js": "/RadencyInternship2022Task2/static/js/main.9f7d0af3.js",
+    "index.html": "/RadencyInternship2022Task2/index.html",
+    "main.262b0e92.css.map": "/RadencyInternship2022Task2/static/css/main.262b0e92.css.map",
+    "main.9f7d0af3.js.map": "/RadencyInternship2022Task2/static/js/main.9f7d0af3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.262b0e92.css",
+    "static/js/main.9f7d0af3.js"
+  ]
+}
