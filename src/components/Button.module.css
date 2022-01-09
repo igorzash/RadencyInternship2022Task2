@@ -6,10 +6,11 @@
 	justify-content: center;
 	background-color: #222;
 	color: #eee;
-	padding: 4px 5px;
+	padding: 4px 10px;
 	transition: background-color 0.1s linear;
+	font-size: 1em;
 }
 
 .button:hover {
-	background-color: #121212;
+	background-color: #111;
 }

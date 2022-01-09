@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Table.module.css";
 
 export const TableRow = ({ children, header }) => (
-	<div className={`${styles.tableRow} ${header ? styles.header : null}`}>
+	<div className={`${styles.tableRow} ${header && styles.header}`}>
 		{children}
 	</div>
 );

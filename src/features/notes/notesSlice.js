@@ -63,8 +63,13 @@ export const notesSlice = createSlice({
 	name: "notes",
 	initialState,
 	reducers: {
-		create: (state, action) => {
-			state.notes.push(action.payload);
+		create: (state) => {
+			state.notes.unshift({
+				id: v4(),
+				contents: "",
+				category: CATEGORY.TASK,
+				date: new Date().toJSON(),
+			});
 		},
 		remove: (state, action) => {
 			state.notes = state.notes.filter(

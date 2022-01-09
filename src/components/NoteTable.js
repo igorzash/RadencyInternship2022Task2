@@ -19,20 +19,30 @@ export const NoteTableRow = ({ note, activeTab }) => {
 	const [contents, setContents] = useState(note.contents);
 	const [category, setCategory] = useState(note.category);
 
-	const [editState, setEditState] = useState(false);
+	const [editState, setEditState] = useState(note.contents === "");
+
 	const handleEdit = () => setEditState(true);
+
 	const handleDismiss = () => {
+		if (contents === "") {
+			handleRemove();
+			return;
+		}
+
 		setContents(note.contents);
 		setCategory(note.category);
 		setEditState(false);
 	};
+
 	const handleSave = () => {
 		dispatch(edit({ id: note.id, contents, category }));
 		setEditState(false);
 	};
+
 	const handleRemove = () => {
 		dispatch(remove({ id: note.id }));
 	};
+
 	const handleToggleArchived = () => {
 		dispatch(toggleArchived({ id: note.id }));
 	};
