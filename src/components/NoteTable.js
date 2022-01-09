@@ -4,8 +4,14 @@ import { datesParser } from "../pure/datesParser";
 import { IconButton } from "./IconButton";
 import { ButtonSet } from "./ButtonSet";
 import { Input } from "./Input";
+import { Select } from "./Select";
 import { useDispatch } from "react-redux";
-import { edit, remove, toggleArchived } from "../features/notes/notesSlice";
+import {
+	CATEGORY,
+	edit,
+	remove,
+	toggleArchived,
+} from "../features/notes/notesSlice";
 
 export const NoteTableRow = ({ note, activeTab }) => {
 	const dispatch = useDispatch();
@@ -50,7 +56,17 @@ export const NoteTableRow = ({ note, activeTab }) => {
 			<TableColumn>
 				{new Date(note.date).toLocaleDateString("en-US")}
 			</TableColumn>
-			<TableColumn>{note.category}</TableColumn>
+			<TableColumn>
+				{editState ? (
+					<Select
+						options={Object.values(CATEGORY)}
+						value={category}
+						onChange={(evt) => setCategory(evt.target.value)}
+					/>
+				) : (
+					category
+				)}
+			</TableColumn>
 			<TableColumn>{dates}</TableColumn>
 			<TableColumn>
 				<ButtonSet>
