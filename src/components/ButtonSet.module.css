@@ -1,0 +1,17 @@
+.buttonSet {
+	display: flex;
+}
+
+.buttonSet > button {
+	border-radius: 0;
+}
+
+.buttonSet > button:first-child {
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.buttonSet > button:last-child {
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
