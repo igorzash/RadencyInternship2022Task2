@@ -1,0 +1,15 @@
+.group {
+	display: flex;
+}
+
+.group > *:not(:first-child) {
+	margin-left: 10px;
+}
+
+.group.fullWidth {
+	width: 100%;
+}
+
+.group.centered {
+	justify-content: center;
+}

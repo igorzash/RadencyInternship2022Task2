@@ -1,0 +1,9 @@
+select {
+	border: none;
+	border-radius: 5px;
+	padding: 5px;
+	text-align: center;
+	background-color: #222;
+	color: #eee;
+	font-size: 1em;
+}

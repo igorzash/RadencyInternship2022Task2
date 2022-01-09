@@ -1,0 +1,33 @@
+.table {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.tableRow {
+	display: flex;
+	align-items: center;
+	padding: 8px 0;
+	background-color: #333;
+	min-height: 50px;
+	text-align: center;
+}
+
+.tableRow:nth-child(even) {
+	background-color: #434343;
+}
+
+.tableRow.header {
+	padding: 20px 0;
+	border-radius: 15px 15px 0 0;
+	background-color: #222;
+	font-weight: bold;
+}
+
+.tableColumn {
+	display: flex;
+	justify-content: center;
+	flex: 1 0 0;
+	max-width: 100%;
+	overflow: hidden;
+}
